@@ -4,7 +4,7 @@ const express = require("express");
 const router = express.Router();
 const Trip = require("../models/trips");
 
-router.get("/", async (req, res) => {
+router.post("/", async (req, res) => {
   try {
     const { departure, arrival, date } = req.body;
     // Date suivante au jour choisit pour le filtrage
